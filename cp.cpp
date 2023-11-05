@@ -13,25 +13,20 @@ void print(vector<ll>a){
 void solve(){
   int n;
   cin>>n;
-  vector<ll>a(n), b(n);
-  ll mna=INT_MAX, mnb=INT_MAX;
-  ll suma = 0, sumb=0;
-  for(auto &x:a){
-    cin>>x;
-    suma+=x;
-    if(x<mna)mna=x;
+  if(n & 1){
+    for(int i=0;i<n;++i){
+      cout<<1<<' ';
+    }
   }
-  for(auto &x:b){
-    cin>>x;
-    sumb+=x;
-    if(x<mnb)mnb=x;
+  else{
+    cout<<1<<' '<<3<<' ';
+    for(int i=0;i<n-2;++i){
+      cout<<2<<' ';
+    }
   }
-  suma+=mnb*n;
-  sumb+=mna*n;
-  ll sum=0;
-  (suma<sumb)?cout<<suma:cout<<sumb;
   cout<<endl;
 }
+
 
 int main(){
  
